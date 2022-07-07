@@ -1,0 +1,25 @@
+.faq-container {
+  color: white;
+  border-bottom: 6px solid rgb(68, 67, 67);
+  padding: 60px 0 60px 0;
+}
+
+.faq-wrapper {
+  max-width: 800px;
+  width: 90%;
+  margin: auto;
+}
+
+.faq-wrapper h1 {
+  margin: 0;
+  line-height: 1.1;
+  font-size: 3.1rem;
+  text-align: center;
+}
+
+.faq-wrapper ul {
+  padding: 0;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  list-style: none;
+}

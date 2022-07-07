@@ -1,0 +1,71 @@
+.getstarted-email {
+  max-width: 704px;
+  margin: auto;
+}
+
+.getstarted-email p {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.form-container input {
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  font-size: 20px;
+  padding: 24px 14px 16px;
+  width: 70%;
+}
+
+.err-border input {
+  border-bottom: 2px solid rgb(255, 179, 0);
+}
+
+.form-container label {
+  position: absolute;
+  user-select: none;
+  font-size: 1.1rem;
+  color: rgb(131, 131, 131);
+  top: 25px;
+  transition: all 0.1s ease-in-out;
+  left: 23px;
+}
+
+.form-container input:focus + label,
+.form-container input:valid + label {
+  transform: translate3d(0, -17px, 0);
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.form-container button {
+  text-align: center;
+  outline: none;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 20px 26px;
+  background-color: rgb(223, 0, 0);
+}
+
+.form-container button:hover {
+  background-color: rgb(241, 2, 2);
+}
+
+.getstarted-email .err-p {
+  text-align: start;
+  margin-bottom: 0;
+  color: rgb(255, 179, 0);
+  font-size: 0.9rem;
+  margin-top: 10px;
+  padding: 0 14px;
+}

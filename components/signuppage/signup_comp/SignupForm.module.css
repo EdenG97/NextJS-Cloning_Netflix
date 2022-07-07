@@ -1,0 +1,93 @@
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 440px;
+  min-height: 100vh;
+  margin: 0 auto -243px;
+}
+.signup-login::before {
+  content: "";
+  height: 155px;
+  display: block;
+}
+
+.signup-login::after {
+  content: "";
+  height: 300px;
+  display: block;
+}
+
+.signup-wrapper h1 {
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.signup-wrapper p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-type {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-type input[type="password"],
+.signup-type input[type="text"] {
+  padding: 22px 10px 12px;
+  font-size: 1.1rem;
+  outline: none;
+  margin: 4px 0;
+}
+
+.signup-type label[for="email"],
+.signup-type label[for="password"] {
+  color: rgb(131, 131, 131);
+  position: absolute;
+  user-select: none;
+  top: 24px;
+  left: 10px;
+  transition: all 0.1s ease-in-out;
+}
+
+.signup-type input[type="text"]:focus + label,
+.signup-type input[type="text"]:valid + label,
+.signup-type input[type="password"]:focus + label,
+.signup-type input[type="password"]:valid + label {
+  font-size: 0.8rem;
+  font-weight: bold;
+  transform: translate3d(2px, -14px, 0);
+}
+
+.signup-checkbox {
+  margin: 8px 0 26px;
+}
+
+.signup-form button {
+  cursor: pointer;
+  outline: none;
+  color: white;
+  border-radius: 2px;
+  font-size: 1.5rem;
+  border: none;
+  padding: 20px 26px;
+  background-color: rgb(223, 0, 0);
+}
+
+.signup-form button:hover {
+  background-color: rgb(241, 2, 2);
+}
+
+.signup-wrapper .err-p {
+  font-size: 0.8rem;
+  color: rgb(255, 38, 0);
+  margin: 0 0 7px;
+}

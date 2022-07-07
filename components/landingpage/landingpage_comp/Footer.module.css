@@ -1,0 +1,27 @@
+.footer-container {
+  color: rgb(116, 114, 114);
+  font-size: 0.8rem;
+  padding: 60px 0;
+}
+
+.footer-wrapper {
+  margin: auto;
+  width: 90%;
+  max-width: 900px;
+}
+
+.footer-wrapper p {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 1rem;
+}
+
+.footer-wrapper a:hover {
+  text-decoration: underline;
+}
+
+.footer-list_item {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}

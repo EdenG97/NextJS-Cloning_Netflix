@@ -1,0 +1,35 @@
+.profile-container {
+  border-bottom: 6px solid rgb(68, 67, 67);
+}
+
+.inner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 26px;
+  gap: 20px;
+  color: white;
+  margin: auto;
+  width: 96%;
+  max-width: 1100px;
+}
+
+.inner-container img {
+  object-fit: cover;
+}
+
+.text-wrapper {
+  max-width: 50%;
+  padding-right: 40px;
+}
+
+.text-wrapper h1 {
+  line-height: 1.1;
+  margin: 0;
+  font-size: 3.1rem;
+}
+
+.text-wrapper p {
+  margin: 16px 0 6px 0;
+  font-size: 1.6rem;
+}

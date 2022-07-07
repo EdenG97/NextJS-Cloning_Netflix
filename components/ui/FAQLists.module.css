@@ -1,0 +1,53 @@
+.faq-list {
+  display: flex;
+  margin-bottom: 8px;
+  flex-direction: column;
+}
+
+.faq-list button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.7rem;
+  color: white;
+  text-align: left;
+  border: none;
+  margin-bottom: 2px;
+  cursor: pointer;
+  background-color: rgb(75, 74, 74);
+  padding: 20px;
+}
+
+.faq-list svg {
+  height: 37px;
+  width: 37px;
+  fill: #fff;
+}
+
+.rotate-open {
+  transform: rotateZ(45deg);
+}
+
+.rotate-closed {
+  transform: rotateZ(0);
+}
+
+.faq-answer {
+  padding: 20px;
+  font-size: 1.7rem;
+  user-select: none;
+  background-color: rgb(75, 74, 74);
+}
+
+.open {
+  transform: scaleY(1);
+  opacity: 1;
+  transform-origin: top;
+  transition: transform 0.2s ease-out;
+}
+
+.closed {
+  position: absolute;
+  transform: scaleY(0);
+  opacity: 0;
+}

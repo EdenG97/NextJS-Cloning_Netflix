@@ -1,0 +1,24 @@
+.login-form_other {
+  margin-top: 84px;
+}
+
+.login-form_other span {
+  color: rgb(98, 98, 98);
+}
+
+.login-form_other a {
+  color: white;
+}
+
+.login-form_other a:hover {
+  text-decoration: underline;
+}
+
+.login-form_other p {
+  color: rgb(146, 145, 145);
+  font-size: 0.8rem;
+}
+
+.login-form_other p a {
+  color: #0071eb;
+}

@@ -1,0 +1,30 @@
+.login-bg {
+  min-height: 100vh;
+  margin: 0 auto -176px;
+}
+
+.login::after {
+  content: "";
+  height: 360px;
+  display: block;
+}
+
+.login-container {
+  position: relative;
+  top: 94px;
+  display: flex;
+  color: white;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.662);
+  padding: 60px 72px 118px 72px;
+  flex-direction: column;
+  border-radius: 4px;
+  max-width: 450px;
+  width: 90%;
+}
+
+.login-container h1 {
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 34px;
+}

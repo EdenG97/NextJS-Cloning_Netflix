@@ -1,0 +1,13 @@
+.footer-ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-ul li {
+  line-height: 32px;
+}
+
+.footer-ul li:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,78 @@
+.login-form {
+  display: flex;
+  gap: 10px;
+  height: 268px;
+  flex-direction: column;
+}
+
+.login-input {
+  position: relative;
+}
+
+.login-input input {
+  color: white;
+  font-size: 1rem;
+  width: 100%;
+  padding: 24px 20px 16px;
+  border-radius: 4px;
+  border: none;
+  background-color: rgb(39, 39, 39);
+  outline: none;
+}
+
+.login-input label {
+  position: absolute;
+  user-select: none;
+  color: rgb(131, 131, 131);
+  top: 20px;
+  left: 19px;
+  transition: all 0.1s ease-in-out;
+}
+
+.login-input input:focus + label,
+.login-input input:valid + label {
+  font-size: 0.7rem;
+  font-weight: bold;
+  transform: translate3d(0, -12px, 0);
+}
+
+.login-form button {
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 4px;
+  background-color: rgb(223, 0, 0);
+  padding: 16px 20px;
+  margin-top: 22px;
+}
+
+.login-rememberme {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.login-rememberme div {
+  display: flex;
+  align-items: center;
+}
+
+.login-rememberme label {
+  user-select: none;
+}
+
+.login-rememberme a:hover {
+  text-decoration: underline;
+}
+
+.err-border input {
+  border-bottom: 2px solid rgb(255, 179, 0);
+}
+
+.err-p {
+  font-size: 0.8rem;
+  color: rgb(255, 179, 0);
+  margin: 0;
+}
