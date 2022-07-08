@@ -5,7 +5,7 @@ type Children = {
   children: React.ReactNode;
 };
 
-const Layout = ({ children }: Children) => {
+const Layout = ({ children }: Children): JSX.Element => {
   return (
     <>
       <Navigation />

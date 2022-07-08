@@ -1,6 +1,6 @@
 import FAQLists from "../../../ui/FAQLists";
 
-const FAQFifthList = () => {
+const FAQFifthList = (): JSX.Element  => {
   return (
     <FAQLists
       question="What can I watch on Netflix?"

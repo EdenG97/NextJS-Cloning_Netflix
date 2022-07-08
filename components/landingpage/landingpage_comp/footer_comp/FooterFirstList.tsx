@@ -1,6 +1,6 @@
 import FooterLists from "../../../ui/FooterLists";
 
-const FooterFirstList = () => {
+const FooterFirstList = (): JSX.Element  => {
   return (
     <FooterLists
       view

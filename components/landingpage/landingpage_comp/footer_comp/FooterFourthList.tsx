@@ -1,6 +1,6 @@
 import FooterLists from "../../../ui/FooterLists";
 
-const FooterFourthList = () => {
+const FooterFourthList = (): JSX.Element  => {
   return (
     <FooterLists
       firstList="Media Center"

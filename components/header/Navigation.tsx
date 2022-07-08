@@ -4,7 +4,7 @@ import classes from "./Navigation.module.css";
 
 import { useRouter } from "next/router";
 
-const Navigation = () => {
+const Navigation = (): JSX.Element  => {
   const router = useRouter();
   const path = router.pathname;
 

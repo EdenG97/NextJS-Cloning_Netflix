@@ -1,6 +1,6 @@
 import Card from "../../../ui/Card";
 
-const WatchEveryWhere = () => {
+const WatchEveryWhere = (): JSX.Element  => {
   return (
     <Card
       direction

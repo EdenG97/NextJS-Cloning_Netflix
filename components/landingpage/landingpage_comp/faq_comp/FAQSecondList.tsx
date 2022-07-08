@@ -1,6 +1,6 @@
 import FAQLists from "../../../ui/FAQLists";
 
-const FAQSecondList = () => {
+const FAQSecondList = (): JSX.Element  => {
   return (
     <FAQLists
       question="How much does Netflix cost?"

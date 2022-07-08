@@ -5,7 +5,7 @@ import FooterFourthList from "./footer_comp/FooterFourthList";
 import FooterSecondList from "./footer_comp/FooterSecondList";
 import FooterThirdList from "./footer_comp/FooterThirdList";
 
-const Footer = () => {
+const Footer = (): JSX.Element  => {
   return (
     <section className={classes["footer-container"]}>
       <div className={classes["footer-wrapper"]}>

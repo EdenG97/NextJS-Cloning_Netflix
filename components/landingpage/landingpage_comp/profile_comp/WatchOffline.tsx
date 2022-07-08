@@ -1,6 +1,6 @@
 import Card from "../../../ui/Card";
 
-const WatchOffline = () => {
+const WatchOffline = (): JSX.Element  => {
   return (
     <Card
       header="Download your shows to watch offline."

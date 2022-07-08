@@ -1,6 +1,6 @@
 import FooterLists from "../../../ui/FooterLists";
 
-const FooterThirdList = () => {
+const FooterThirdList = (): JSX.Element  => {
   return (
     <FooterLists
       firstList="Account"

@@ -14,7 +14,7 @@ const FAQLists = ({
   question,
   firstParagraph,
   secondParagraph,
-}: Props) => {
+}: Props): JSX.Element => {
   const [view, setView] = useState<State>(false);
   let show;
   let rotate;

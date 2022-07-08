@@ -2,7 +2,7 @@ import Link from "next/link";
 import classes from "./FooterSign.module.css";
 import { useRouter } from "next/router";
 
-const FooterSign = () => {
+const FooterSign = (): JSX.Element => {
   const router = useRouter();
   const path = router.pathname;
 

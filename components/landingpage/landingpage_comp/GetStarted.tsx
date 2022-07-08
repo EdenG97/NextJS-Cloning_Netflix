@@ -1,7 +1,7 @@
 import EmailGetStarted from "../../ui/EmailGetStarted";
 import classes from "./GetStarted.module.css";
 
-const GetStarted = () => {
+const GetStarted = (): JSX.Element  => {
   return (
     <section className={classes["getstarted-container"]}>
       <div className={classes["getstarted-wrapper"]}>

@@ -17,7 +17,7 @@ const FooterLists = ({
   fourthList,
   fifthList,
   view,
-}: Lists) => {
+}: Lists): JSX.Element => {
   return (
     <ul className={classes["footer-ul"]}>
       <li>

@@ -9,7 +9,7 @@ import React, {
 } from "react";
 import { useRouter } from "next/router";
 
-const FormInput = () => {
+const FormInput = (): JSX.Element  => {
   const emailContext = useContext(EmailContext);
   const passwordContext = useContext(PasswordContext);
   const router = useRouter();

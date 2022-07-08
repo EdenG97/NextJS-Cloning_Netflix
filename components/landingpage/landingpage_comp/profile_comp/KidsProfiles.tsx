@@ -1,6 +1,6 @@
 import Card from "../../../ui/Card";
 
-const KidsProfiles = () => {
+const KidsProfiles = (): JSX.Element  => {
   return (
     <Card
       header="Create profiles for kids."

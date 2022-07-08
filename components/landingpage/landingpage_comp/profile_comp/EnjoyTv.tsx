@@ -1,6 +1,6 @@
 import Card from "../../../ui/Card";
 
-const EnjoyTv = () => {
+const EnjoyTv = (): JSX.Element  => {
   return (
     <Card
       direction

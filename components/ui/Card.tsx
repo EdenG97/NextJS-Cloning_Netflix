@@ -18,7 +18,7 @@ const Card = ({
   image,
   width,
   height,
-}: Props) => {
+}: Props): JSX.Element  => {
   let element: JSX.Element;
   if (direction) {
     element = (

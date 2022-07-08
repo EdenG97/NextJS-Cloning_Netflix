@@ -1,6 +1,6 @@
 import FAQLists from "../../../ui/FAQLists";
 
-const FAQFirstList = () => {
+const FAQFirstList = (): JSX.Element  => {
   return (
     <FAQLists
       direction

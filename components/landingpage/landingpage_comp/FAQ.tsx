@@ -7,7 +7,7 @@ import FAQFourthList from "./faq_comp/FAQFourthList";
 import FAQFifthList from "./faq_comp/FAQFifthList";
 import FAQSixthList from "./faq_comp/FAQSixthList";
 
-const FAQ = () => {
+const FAQ = (): JSX.Element  => {
   return (
     <>
       <section className={classes["faq-container"]}>

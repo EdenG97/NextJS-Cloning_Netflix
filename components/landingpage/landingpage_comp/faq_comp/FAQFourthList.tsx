@@ -1,6 +1,6 @@
 import FAQLists from "../../../ui/FAQLists";
 
-const FAQFourthList = () => {
+const FAQFourthList = (): JSX.Element  => {
   return (
     <FAQLists
       question="How do I cancel?"
