@@ -1,11 +1,8 @@
+import Main from "../../components/browse-page/Main";
 import { NextPage } from "next";
 
-const Browse = () => {
-  return (
-    <div>
-      <h1>Still On Development</h1>
-    </div>
-  );
+const Browse: NextPage = () => {
+  return <Main />;
 };
 
 export default Browse;
