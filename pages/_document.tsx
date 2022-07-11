@@ -12,6 +12,7 @@ class MyDocuments extends Document<Props> {
     return (
       <Html>
         <Head>
+          <link rel="shortcut icon" href="/Nflix.png" />
           <link
             rel="preconnect"
             href="https://fonts.googleapis.com"

@@ -1,0 +1,65 @@
+.not-found_container {
+  padding-top: 100px;
+  text-align: center;
+  color: white;
+  height: 100vh;
+}
+
+.not-found_wrapper {
+  background-image: url(../../public/netflix-img/404Image.jfif);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  user-select: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 80px;
+}
+
+.not-found_wrapper div:first-of-type {
+  display: flex;
+  width: 90%;
+  gap: 30px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.not-found_wrapper h1 {
+  margin: 0;
+  font-size: 4.6rem;
+}
+
+.not-found_wrapper p {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.not-found_wrapper a {
+  color: black;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 16px 38px;
+  background-color: white;
+}
+
+.not-found_wrapper a:hover {
+  background-color: rgb(215, 214, 214);
+}
+
+.not-found_wrapper div:last-of-type {
+  border-left: 2px solid red;
+  padding: 0 12px;
+}
+
+.not-found_wrapper div:last-of-type p {
+  line-height: 4rem;
+  font-size: 2rem;
+}
+
+.not-found_wrapper div:last-of-type span {
+  letter-spacing: 1px;
+  font-weight: bold;
+}
