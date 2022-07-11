@@ -12,7 +12,7 @@ const Notification = ({ status }) => {
   useEffect(() => {
     setMounted(true);
     return () => setMounted(false);
-  });
+  }, []);
 
   let setClasses = "";
   if (
