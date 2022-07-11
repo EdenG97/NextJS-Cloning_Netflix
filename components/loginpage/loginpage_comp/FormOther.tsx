@@ -1,7 +1,7 @@
 import classes from "./FormOther.module.css";
 import Link from "next/link";
 
-const FormOther = (): JSX.Element  => {
+const FormOther = (): JSX.Element => {
   return (
     <div className={classes["login-form_other"]}>
       <span>

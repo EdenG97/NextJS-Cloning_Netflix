@@ -6,6 +6,8 @@ const nextConfig = {
     mongodb_password: "eden4321",
     mongodb_clustername: "cluster0",
     mongodb_database: "Netflix",
+    NEXTAUTH_SECRET:
+      "sqRBasDWAC9b3XELGDubLpWgOHjP1UF2dHOXSSw8ZcQ=",
   },
 };
 

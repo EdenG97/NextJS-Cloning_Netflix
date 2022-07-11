@@ -3,7 +3,7 @@ import EmailContext from "../../store/EmailContext";
 import React, { useContext, useEffect } from "react";
 import { useRouter } from "next/router";
 
-const EmailGetStarted = (): JSX.Element  => {
+const EmailGetStarted = (): JSX.Element => {
   const emailContext = useContext(EmailContext);
   const router = useRouter();
 
