@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   env: {
     mongodb_username: "edennetflix",
-    mongodb_password: "darkside9090",
+    mongodb_password: "eden4321",
     mongodb_clustername: "cluster0",
     mongodb_database: "Netflix",
   },

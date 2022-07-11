@@ -55,9 +55,6 @@ const SignupForm = (): JSX.Element => {
       return;
     }
 
-    console.log(emailContext.emailValue);
-    console.log(passwordContext.passwordValue);
-
     try {
       const response = await fetch("/api/auth/signup", {
         method: "POST",
