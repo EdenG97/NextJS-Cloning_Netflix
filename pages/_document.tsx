@@ -27,6 +27,7 @@ class MyDocuments extends Document<Props> {
           />
         </Head>
         <body>
+          <div id="overlay"></div>
           <Main />
           <NextScript />
         </body>

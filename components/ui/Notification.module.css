@@ -1,0 +1,28 @@
+.modal {
+  color: black;
+  position: absolute;
+  background-color: white;
+  width: 270px;
+  text-align: center;
+  font-size: 1.1rem;
+  border: 1px solid rgb(234, 234, 234);
+  border-radius: 6px;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  margin: auto;
+  z-index: 2;
+  transition: all 400ms ease-out;
+}
+
+.exists {
+  transform: translateY(24px);
+  opacity: 1;
+  border-bottom: 4px solid red;
+}
+
+.success {
+  transform: translateY(24px);
+  opacity: 1;
+  border-bottom: 4px solid rgb(28, 190, 50);
+}

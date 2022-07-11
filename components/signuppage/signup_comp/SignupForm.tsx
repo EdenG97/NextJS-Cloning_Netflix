@@ -7,8 +7,12 @@ import React, {
   useContext,
   useEffect,
 } from "react";
+import NotificationContext from "../../../store/NotificationContext";
 
 const SignupForm = (): JSX.Element => {
+  const notificationContext = useContext(
+    NotificationContext
+  );
   const emailContext = useContext(EmailContext);
   const passwordContext = useContext(PasswordContext);
   const router = useRouter();
@@ -38,7 +42,7 @@ const SignupForm = (): JSX.Element => {
   };
 
   // Submit Handler
-  const formSubmitHandler = (event: FormEvent) => {
+  const formSubmitHandler = async (event: FormEvent) => {
     event.preventDefault();
     if (
       !emailContext.emailCheck ||
@@ -51,7 +55,35 @@ const SignupForm = (): JSX.Element => {
       return;
     }
 
-    router.replace("/login");
+    console.log(emailContext.emailValue);
+    console.log(passwordContext.passwordValue);
+
+    try {
+      const response = await fetch("/api/auth/signup", {
+        method: "POST",
+        body: JSON.stringify({
+          email: emailContext.emailValue,
+          password: passwordContext.passwordValue,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(
+          data.message || "Something went wrong!"
+        );
+      } else {
+        notificationContext.showNotif(
+          "Successfully Registered"
+        );
+      }
+    } catch (error) {
+      notificationContext.showNotif("User Already Exists");
+    }
   };
 
   return (

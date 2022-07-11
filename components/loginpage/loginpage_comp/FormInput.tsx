@@ -2,6 +2,7 @@ import Link from "next/link";
 import classes from "./FormInput.module.css";
 import PasswordContext from "../../../store/PasswordContext";
 import EmailContext from "../../../store/EmailContext";
+import { signIn } from "next-auth/react";
 import React, {
   FormEvent,
   useContext,
@@ -9,7 +10,7 @@ import React, {
 } from "react";
 import { useRouter } from "next/router";
 
-const FormInput = (): JSX.Element  => {
+const FormInput = (): JSX.Element => {
   const emailContext = useContext(EmailContext);
   const passwordContext = useContext(PasswordContext);
   const router = useRouter();
@@ -40,7 +41,7 @@ const FormInput = (): JSX.Element  => {
   };
 
   // Submit Handler
-  const submitFormHandler = (event: FormEvent) => {
+  const submitFormHandler = async (event: FormEvent) => {
     event.preventDefault();
     if (
       !emailContext.emailCheck ||
@@ -52,7 +53,24 @@ const FormInput = (): JSX.Element  => {
       passwordContext.passwordBlur();
       return;
     }
-    router.push("/signup");
+
+    try {
+      const loginIn = await signIn("credentials", {
+        redirect: false,
+        email: emailContext.emailValue,
+        password: passwordContext.passwordValue,
+      });
+
+      if (!loginIn?.error) {
+        router.replace("/browse");
+      } else {
+        throw new Error(
+          loginIn.error || "Something went wrong!"
+        );
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
