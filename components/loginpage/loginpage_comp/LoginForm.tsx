@@ -2,7 +2,7 @@ import FormInput from "./FormInput";
 import FormOther from "./FormOther";
 import classes from "./LoginForm.module.css";
 
-const LoginForm = (): JSX.Element  => {
+const LoginForm = (): JSX.Element => {
   return (
     <section className={classes["login-bg"]}>
       <div className={classes.login}>

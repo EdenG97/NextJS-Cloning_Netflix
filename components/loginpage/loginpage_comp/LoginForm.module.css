@@ -11,11 +11,12 @@
 
 .login-container {
   position: relative;
+  z-index: 2;
   top: 94px;
   display: flex;
   color: white;
   margin: auto;
-  background-color: rgba(0, 0, 0, 0.662);
+  background-color: rgba(0, 0, 0, 0.73);
   padding: 60px 72px 118px 72px;
   flex-direction: column;
   border-radius: 4px;

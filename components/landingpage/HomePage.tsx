@@ -4,7 +4,7 @@ import GetStarted from "./landingpage_comp/GetStarted";
 import Profile from "./landingpage_comp/Profile";
 import { Fragment } from "react";
 
-const HomePage = (): JSX.Element  => {
+const HomePage = (): JSX.Element => {
   return (
     <Fragment>
       <GetStarted />

@@ -23,6 +23,7 @@ const Navigation = (): JSX.Element => {
                 alt="Netflix"
                 width={160}
                 height={100}
+                priority
               />
             </a>
           </Link>

@@ -1,9 +1,11 @@
 .container {
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
-    ),
-    url("../../public/netflix-img/netflix-background-login.jpg");
-  background-position: center;
-  background-size: cover;
+  position: relative;
+}
+
+.gradient {
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.517);
+  width: 100%;
+  height: 100%;
 }

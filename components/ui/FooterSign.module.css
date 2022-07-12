@@ -1,6 +1,8 @@
 .footer-container {
+  position: relative;
+  z-index: 2;
   padding: 44px 0;
-  background-color: rgba(0, 0, 0, 0.662);
+  background-color: rgba(0, 0, 0, 0.73);
   height: 243px;
 }
 
@@ -11,7 +13,6 @@
 }
 
 .footer-wrapper {
-  color: white;
   max-width: 760px;
   color: rgb(116, 114, 114);
   margin: auto;
