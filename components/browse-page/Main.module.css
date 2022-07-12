@@ -1,7 +1,11 @@
 .style {
   position: relative;
   top: 340px;
-  font-size: 3.4rem;
   text-align: center;
   color: white;
+}
+
+.style span {
+  font-size: 1.1rem;
+  font-weight: bold;
 }
