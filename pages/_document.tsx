@@ -13,6 +13,10 @@ class MyDocuments extends Document<Props> {
       <Html>
         <Head>
           <link rel="shortcut icon" href="/Nflix.png" />
+          <meta
+            name="google-site-verification"
+            content="7bXUWi-XyMHNH7bBAm1HB4scWbFit_-curnpMA0EfzM"
+          />
           <link
             rel="preconnect"
             href="https://fonts.googleapis.com"
