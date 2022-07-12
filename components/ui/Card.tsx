@@ -18,7 +18,7 @@ const Card = ({
   image,
   width,
   height,
-}: Props): JSX.Element  => {
+}: Props): JSX.Element => {
   let element: JSX.Element;
   if (direction) {
     element = (
@@ -33,6 +33,7 @@ const Card = ({
             alt={image}
             width={width}
             height={height}
+            priority
           />
         </div>
       </div>
@@ -46,6 +47,7 @@ const Card = ({
             alt={image}
             width={width}
             height={height}
+            priority
           />
           <div className={classes["text-wrapper"]}>
             <h1>{header}</h1>

@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom";
 import classes from "./Notification.module.css";
-import { useContext, useEffect, useState } from "react";
 import NotificationContext from "../../store/NotificationContext";
+import { useContext, useEffect, useState } from "react";
 
 const Notification = ({ status }) => {
   const [mounted, setMounted] = useState(false);
