@@ -33,7 +33,6 @@ const Card = ({
             alt={image}
             width={width}
             height={height}
-            priority
           />
         </div>
       </div>
@@ -47,7 +46,6 @@ const Card = ({
             alt={image}
             width={width}
             height={height}
-            priority
           />
           <div className={classes["text-wrapper"]}>
             <h1>{header}</h1>

@@ -8,7 +8,7 @@ const GetStarted = (): JSX.Element => {
       <div className={classes.gradient} />
       <Image
         alt="landing page background image"
-        src="/netflix-img/netflix-background-landingpage.png"
+        src="/netflix-img/netflix-landingpage.png"
         objectFit="cover"
         layout="fill"
         priority

@@ -3,7 +3,7 @@ import KidsProfiles from "./profile_comp/KidsProfiles";
 import WatchEveryWhere from "./profile_comp/WatchEverywhere";
 import WatchOffline from "./profile_comp/WatchOffline";
 
-const Profile = (): JSX.Element  => {
+const Profile = (): JSX.Element => {
   return (
     <section>
       <EnjoyTv />

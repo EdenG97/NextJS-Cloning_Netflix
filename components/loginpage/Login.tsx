@@ -13,7 +13,6 @@ const LoginPage = (): JSX.Element => {
           src="/netflix-img/netflix-background-login.jpg"
           layout="fill"
           objectFit="cover"
-          priority
         />
         <LoginForm />
         <FooterSign />
