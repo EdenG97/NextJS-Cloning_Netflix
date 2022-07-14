@@ -7,7 +7,7 @@
 .form-container {
   position: relative;
   margin: auto;
-  width: 704px;
+  max-width: 704px;
   display: flex;
 }
 
