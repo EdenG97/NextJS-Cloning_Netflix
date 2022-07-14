@@ -120,4 +120,8 @@
     width: 130px;
     padding: 12px 0;
   }
+
+  .getstarted-email .err-p {
+    font-size: 0.8rem;
+  }
 }

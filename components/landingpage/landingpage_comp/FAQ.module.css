@@ -23,3 +23,13 @@
   margin-bottom: 60px;
   list-style: none;
 }
+
+@media (max-width: 950px) {
+  .faq-wrapper {
+    max-width: 704px;
+  }
+
+  .faq-wrapper h1 {
+    font-size: 2.4rem;
+  }
+}
