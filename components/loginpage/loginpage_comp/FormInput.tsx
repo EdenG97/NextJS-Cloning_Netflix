@@ -69,7 +69,7 @@ const FormInput = (): JSX.Element => {
       if (!loginIn?.error) {
         setIsLoading(false);
         console.log("Log you in...");
-        // router.replace("/browse");
+        router.push("/browse");
       } else {
         throw new Error(
           loginIn.error || "Something went wrong!"
