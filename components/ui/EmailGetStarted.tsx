@@ -68,16 +68,15 @@ const EmailGetStarted = (): JSX.Element => {
             : classes["form-container"]
         }
       >
-        <input
-          type="text"
-          id="email"
-          autoComplete="off"
-          value={emailContext.emailValue}
-          onBlur={blurHandler}
-          onChange={emailChangeHandler}
-          required
-        />
-        <label htmlFor="email">Email address</label>
+        <div>
+          <input type="text" id="email" />
+          <label htmlFor="email">Email address</label>
+        </div>
+        {!emailContext.emailCheck && (
+          <p className={classes["err-p"]}>
+            Please enter a valid email address
+          </p>
+        )}
         <button
           onClick={formSubmitHandler}
           disabled={isLoading ? true : false}
@@ -85,11 +84,6 @@ const EmailGetStarted = (): JSX.Element => {
           {isLoading ? <LoadingSpinner /> : "Get Started >"}
         </button>
       </div>
-      {!emailContext.emailCheck && (
-        <p className={classes["err-p"]}>
-          Please enter a valid email address
-        </p>
-      )}
     </div>
   );
 };

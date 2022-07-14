@@ -43,3 +43,10 @@
   cursor: default;
   background-color: rgba(255, 0, 0, 0.77);
 }
+
+@media (max-width: 950px) {
+  .image {
+    width: 120px;
+    height: 74px;
+  }
+}

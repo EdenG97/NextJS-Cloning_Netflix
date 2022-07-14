@@ -20,7 +20,6 @@
 
 .text-wrapper {
   max-width: 50%;
-  padding-right: 40px;
 }
 
 .text-wrapper h1 {
@@ -32,4 +31,16 @@
 .text-wrapper p {
   margin: 16px 0 6px 0;
   font-size: 1.6rem;
+}
+
+@media (max-width: 950px) {
+  .inner-container {
+    text-align: center;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .text-wrapper {
+    max-width: 90%;
+  }
 }
