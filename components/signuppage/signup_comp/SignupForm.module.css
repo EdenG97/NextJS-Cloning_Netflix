@@ -86,6 +86,11 @@
   background-color: rgb(241, 2, 2);
 }
 
+.signup-form button:disabled {
+  cursor: default;
+  background-color: rgba(223, 0, 0, 0.77);
+}
+
 .signup-wrapper .err-p {
   font-size: 0.8rem;
   color: rgb(255, 38, 0);

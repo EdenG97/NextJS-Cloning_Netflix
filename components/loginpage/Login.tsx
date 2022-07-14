@@ -10,6 +10,7 @@ const LoginPage = (): JSX.Element => {
       <div className={classes.container}>
         <div className={classes.gradient} />
         <Image
+          alt="Netflix login background"
           src="/netflix-img/netflix-background-login.jpg"
           layout="fill"
           objectFit="cover"

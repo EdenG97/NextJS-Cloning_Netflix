@@ -6,10 +6,14 @@ import React, {
   FormEvent,
   useContext,
   useEffect,
+  useState,
 } from "react";
 import NotificationContext from "../../../store/NotificationContext";
+import LoadingSpinner from "../../ui/LoadingSpinner";
 
 const SignupForm = (): JSX.Element => {
+  const [isLoading, setIsLoading] =
+    useState<boolean>(false);
   const notificationContext = useContext(
     NotificationContext
   );
@@ -55,6 +59,7 @@ const SignupForm = (): JSX.Element => {
       return;
     }
 
+    setIsLoading(true);
     try {
       const response = await fetch("/api/auth/signup", {
         method: "POST",
@@ -74,11 +79,13 @@ const SignupForm = (): JSX.Element => {
           data.message || "Something went wrong!"
         );
       } else {
+        setIsLoading(false);
         notificationContext.showNotif(
           "Successfully Registered"
         );
       }
     } catch (error) {
+      setIsLoading(false);
       notificationContext.showNotif("User Already Exists");
     }
   };
@@ -135,8 +142,11 @@ const SignupForm = (): JSX.Element => {
                 offers
               </label>
             </div>
-            <button onClick={formSubmitHandler}>
-              Next
+            <button
+              onClick={formSubmitHandler}
+              disabled={isLoading ? true : false}
+            >
+              {isLoading ? <LoadingSpinner /> : "Next"}
             </button>
           </div>
         </div>

@@ -51,6 +51,7 @@
   color: white;
   border: none;
   border-radius: 2px;
+  width: 196px;
   cursor: pointer;
   font-size: 1.5rem;
   padding: 20px 26px;
@@ -59,6 +60,11 @@
 
 .form-container button:hover {
   background-color: rgb(241, 2, 2);
+}
+
+.form-container button:disabled {
+  cursor: default;
+  background-color: rgba(223, 0, 0, 0.77);
 }
 
 .getstarted-email .err-p {

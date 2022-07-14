@@ -1,16 +1,20 @@
 import Link from "next/link";
 import classes from "./FormInput.module.css";
 import PasswordContext from "../../../store/PasswordContext";
+import LoadingSpinner from "../../ui/LoadingSpinner";
 import EmailContext from "../../../store/EmailContext";
 import { signIn } from "next-auth/react";
 import React, {
   FormEvent,
   useContext,
   useEffect,
+  useState,
 } from "react";
 import { useRouter } from "next/router";
 
 const FormInput = (): JSX.Element => {
+  const [isLoading, setIsLoading] =
+    useState<boolean>(false);
   const emailContext = useContext(EmailContext);
   const passwordContext = useContext(PasswordContext);
   const router = useRouter();
@@ -55,6 +59,7 @@ const FormInput = (): JSX.Element => {
     }
 
     try {
+      setIsLoading(true);
       const loginIn = await signIn("credentials", {
         redirect: false,
         email: emailContext.emailValue,
@@ -62,13 +67,16 @@ const FormInput = (): JSX.Element => {
       });
 
       if (!loginIn?.error) {
-        router.replace("/browse");
+        setIsLoading(false);
+        console.log("Log you in...");
+        // router.replace("/browse");
       } else {
         throw new Error(
           loginIn.error || "Something went wrong!"
         );
       }
     } catch (error) {
+      setIsLoading(false);
       console.log(error);
     }
   };
@@ -120,7 +128,13 @@ const FormInput = (): JSX.Element => {
           characters.
         </p>
       )}
-      <button onClick={submitFormHandler}>Sign In</button>
+
+      <button
+        onClick={submitFormHandler}
+        disabled={isLoading ? true : false}
+      >
+        {isLoading ? <LoadingSpinner /> : "Sign In"}
+      </button>
       <div className={classes["login-rememberme"]}>
         <div>
           <input

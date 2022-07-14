@@ -1,11 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
 import classes from "./Navigation.module.css";
+import NotificationContext from "../../store/NotificationContext";
 import { useRouter } from "next/router";
+import { useContext } from "react";
 
 const Navigation = (): JSX.Element => {
   const router = useRouter();
+  const notificationContext = useContext(
+    NotificationContext
+  );
   const path = router.pathname;
+
+  const clickHandler = () => {
+    router.replace("/login");
+  };
 
   let border: string;
   path === "/signup"
@@ -29,11 +38,17 @@ const Navigation = (): JSX.Element => {
         </li>
         {(path === "/" || path === "/signup") && (
           <li className={classes.signin}>
-            <Link href="/login">
-              <a>
-                <button>Sign In</button>
-              </a>
-            </Link>
+            <button
+              onClick={clickHandler}
+              disabled={
+                notificationContext.notification ===
+                "Successfully Registered"
+                  ? true
+                  : false
+              }
+            >
+              Sign In
+            </button>
           </li>
         )}
       </ul>

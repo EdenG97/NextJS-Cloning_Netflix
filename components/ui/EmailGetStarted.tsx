@@ -1,9 +1,16 @@
 import classes from "./EmailGetStarted.module.css";
 import EmailContext from "../../store/EmailContext";
-import React, { useContext, useEffect } from "react";
+import React, {
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 import { useRouter } from "next/router";
+import LoadingSpinner from "./LoadingSpinner";
 
 const EmailGetStarted = (): JSX.Element => {
+  const [isLoading, setIsLoading] =
+    useState<boolean>(false);
   const emailContext = useContext(EmailContext);
   const router = useRouter();
 
@@ -21,7 +28,7 @@ const EmailGetStarted = (): JSX.Element => {
     emailContext.emailBlur();
   };
 
-  const formSubmitHandler = () => {
+  const formSubmitHandler = async () => {
     if (
       !emailContext.emailCheck ||
       emailContext.emailValue === ""
@@ -29,7 +36,23 @@ const EmailGetStarted = (): JSX.Element => {
       emailContext.emailBlur();
       return;
     }
-    router.push("/signup");
+
+    setIsLoading(true);
+    const response = await fetch("/api/auth/emailCheck", {
+      method: "POST",
+      body: JSON.stringify({
+        email: emailContext.emailValue,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (response.ok) {
+      router.push("/login");
+    } else {
+      router.push("/signup");
+    }
   };
 
   return (
@@ -55,8 +78,11 @@ const EmailGetStarted = (): JSX.Element => {
           required
         />
         <label htmlFor="email">Email address</label>
-        <button onClick={formSubmitHandler}>
-          Get Started &gt;
+        <button
+          onClick={formSubmitHandler}
+          disabled={isLoading ? true : false}
+        >
+          {isLoading ? <LoadingSpinner /> : "Get Started >"}
         </button>
       </div>
       {!emailContext.emailCheck && (

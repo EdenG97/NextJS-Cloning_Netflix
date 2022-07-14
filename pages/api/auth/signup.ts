@@ -6,6 +6,17 @@ const handler = async (
   req: NextApiRequest,
   res: NextApiResponse
 ) => {
+  let client;
+  try {
+    client = await connectDb();
+  } catch (error) {
+    res
+      .status(500)
+      .json({ message: "Connecting to database failed!" });
+    client?.close();
+    return;
+  }
+
   if (req.method === "POST") {
     const data = req.body;
 
@@ -28,7 +39,6 @@ const handler = async (
       return;
     }
 
-    const client = await connectDb();
     const db = client.db();
 
     // Checking existing user

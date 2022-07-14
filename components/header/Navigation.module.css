@@ -28,6 +28,7 @@
 }
 
 .signin button {
+  user-select: none;
   background-color: red;
   font-size: 1rem;
   font-weight: 600;
@@ -36,4 +37,9 @@
   padding: 8px 16px;
   border-radius: 5px;
   border: none;
+}
+
+.signin button:disabled {
+  cursor: default;
+  background-color: rgba(255, 0, 0, 0.77);
 }
