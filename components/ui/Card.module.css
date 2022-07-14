@@ -43,4 +43,12 @@
   .text-wrapper {
     max-width: 90%;
   }
+
+  .text-wrapper h1 {
+    font-size: 2.4rem;
+  }
+
+  .text-wrapper p {
+    font-size: 1.1rem;
+  }
 }

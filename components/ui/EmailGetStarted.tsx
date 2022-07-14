@@ -69,7 +69,15 @@ const EmailGetStarted = (): JSX.Element => {
         }
       >
         <div>
-          <input type="text" id="email" />
+          <input
+            type="text"
+            id="email"
+            autoComplete="off"
+            value={emailContext.emailValue}
+            onBlur={blurHandler}
+            onChange={emailChangeHandler}
+            required
+          />
           <label htmlFor="email">Email address</label>
         </div>
         {!emailContext.emailCheck && (
@@ -81,7 +89,11 @@ const EmailGetStarted = (): JSX.Element => {
           onClick={formSubmitHandler}
           disabled={isLoading ? true : false}
         >
-          {isLoading ? <LoadingSpinner /> : "Get Started >"}
+          {isLoading ? (
+            <LoadingSpinner leftPosition />
+          ) : (
+            "Get Started >"
+          )}
         </button>
       </div>
     </div>

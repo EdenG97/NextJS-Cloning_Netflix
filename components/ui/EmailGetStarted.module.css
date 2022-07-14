@@ -5,8 +5,10 @@
 }
 
 .form-container {
+  position: relative;
+  margin: auto;
+  width: 704px;
   display: flex;
-  justify-content: center;
 }
 
 .form-container div:first-of-type {
@@ -33,53 +35,18 @@
   left: 0;
   user-select: none;
   color: rgb(131, 131, 131);
-  top: 20px;
-  transition: transform 0.1s ease-in-out;
+  top: 24px;
+  font-size: 1.2rem;
+  transition: transform 0.1s ease-out;
   left: 14px;
 }
 
 .form-container input:focus + label,
 .form-container input:valid + label {
-  transform: translate3d(0, -17px, 0);
+  transform: translate3d(0, -19px, 0);
   font-size: 0.8rem;
   font-weight: bold;
 }
-
-/* .form-container input:focus + label::content {
-  transform: translate3d(0, -17px, 0);
-  font-weight: bold;
-  font-size: 0.8rem;
-} */
-
-/* .form-container input {
-  outline: none;
-  border: none;
-  border-radius: 2px;
-  font-size: 20px;
-  padding: 24px 14px 16px;
-  width: 70%;
-}
-
-.err-border input {
-  border-bottom: 2px solid rgb(255, 179, 0);
-}
-
-.form-container label {
-  position: absolute;
-  user-select: none;
-  font-size: 1.1rem;
-  color: rgb(131, 131, 131);
-  top: 25px;
-  transition: all 0.1s ease-in-out;
-  left: 23px;
-}
-
-.form-container input:focus + label,
-.form-container input:valid + label {
-  transform: translate3d(0, -17px, 0);
-  font-weight: bold;
-  font-size: 0.8rem;
-} */
 
 .form-container button {
   text-align: center;
@@ -127,7 +94,8 @@
   }
 
   .form-container label {
-    height: 58px;
+    font-size: 1rem;
+    top: 16px;
   }
 
   .form-container input {
@@ -136,7 +104,7 @@
 
   .form-container input:focus + label,
   .form-container input:valid + label {
-    transform: translate3d(0, -17px, 0);
+    transform: translate3d(0, -12px, 0);
     font-size: 0.7rem;
     font-weight: bold;
   }
