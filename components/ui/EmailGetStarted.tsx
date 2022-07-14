@@ -49,9 +49,9 @@ const EmailGetStarted = (): JSX.Element => {
     });
 
     if (response.ok) {
-      router.push("/login");
-    } else {
       router.push("/signup");
+    } else {
+      router.push("/login");
     }
   };
 

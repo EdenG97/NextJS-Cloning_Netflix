@@ -26,13 +26,13 @@ const handler = async (
 
     if (existingEmail) {
       res
-        .status(200)
+        .status(300)
         .json({ message: "Directed to login" });
       client.close();
       return;
     } else if (!existingEmail) {
       res
-        .status(404)
+        .status(200)
         .json({ message: "Directed to signup" });
     }
 
